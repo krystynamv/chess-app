@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chess</title>
+    <style>
+      body {
+        background-color: #f5f2fe;
+      }
+      h1 {
+        text-align: center;
+        color: rgb(78, 67, 67);
+        font-size: 48px;
+        border: 1px solid #7e4b09;
+        border-radius: 10px;
+        background-color: #eed5a7;
+        padding: 15px;
+      }
+      h2 {
+        display: block;
+        text-align: center;
+        color: #7e4b09;
+        font-size: 34px;
+      }
+      img {
+        display: block;
+        margin: 0 auto;
+        max-width: 80%;
+        border-radius: 10px;
+      }
+      p {
+        margin-top: 30px;
+        margin-bottom: 10px;
+        line-height: 1.5;
+        text-align: justify;
+        font-size: 20px;
+      }
+      a {
+        text-decoration: none;
+        color: #7e4b09;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      button {
+        display: block;
+        margin: 0 auto;
+        margin-top: 10px;
+        font-weight: 800;
+        font-size: 28px;
+        color: white;
+        padding: 15px 25px;
+        border-radius: 4px;
+        border: 1px;
+        background-color: #74552d;
+        box-shadow: 0 1px 20px rgb(0 0 0 / 50%);
+        transition: opacity 150ms ease;
+      }
+      button:hover {
+        background-color: white;
+        color: #74552d;
+        cursor: pointer;
+      }
+      span {
+        display: block;
+        text-align: center;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 100 px;
+        background: linear-gradient(to top, #e6b980 0%, #eacda3 100%);
+        padding: 10px 40px;
+        border-radius: 5%;
+        box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>♟ Сhess ♟</h1>
+      <h2>Logical game</h2>
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/049/087/original/1554364570_chess-4067149_1280.jpg?1666035110"
+        alt="Chess"
+      />
+
+      <p>
+        <strong>Chess</strong> is a board game for two players. It is sometimes
+        called Western chess or international chess to distinguish it from
+        related games, such as xiangqi (Chinese chess) and shogi (Japanese
+        chess). The current form of the game emerged in Spain and the rest of
+        Southern Europe during the second half of the 15th century after
+        evolving from chaturanga, a similar but much older game of Indian
+        origin. Today, chess is one of the world's most popular games, played by
+        millions of people worldwide.
+      </p>
+      <a href="https://en.wikipedia.org/wiki/Chess" target="_blank">
+        <em>Learn more in Wikipedia</em>
+      </a>
+      <button class="buyButton">Buy chess</button>
+      <hr />
+      <span>
+        This page was built by <br />
+        Krystyna Moiseieva
+      </span>
+    </div>
+    <script>
+      function buy() {
+        let name = prompt("What is your name?");
+        let email = prompt("What is your email address?");
+        let delivery = prompt(
+          "Specify the delivery method: Express or Standart?"
+        );
+        delivery = delivery.toLowerCase().trim();
+        if (delivery === "express") {
+          alert(
+            "Tnank you, " +
+              name +
+              ", we will send you info about Express delivery on " +
+              email
+          );
+        } else {
+          alert(
+            "Tnank you, " +
+              name +
+              ", we will send you info about Standart delivery on " +
+              email
+          );
+        }
+      }
+      let buyButton = document.querySelector("button");
+      buyButton.addEventListener("click", buy);
+    </script>
+  </body>
+</html>
